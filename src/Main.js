@@ -1,9 +1,12 @@
 import React from 'react'
-import { Container } from 'react-bootstrap'
+import { Container, Navbar, NavbarBrand } from 'react-bootstrap'
 import Datatable from './components/Datatable'
 const Main = () => {
   return (
     <Container fluid>
+      <Navbar>
+        <NavbarBrand>Solita Dev Akatemia</NavbarBrand>
+      </Navbar>
       <Datatable />
     </Container>
   )
