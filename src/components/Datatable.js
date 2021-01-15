@@ -30,9 +30,7 @@ const Datatable = () => {
   const classes = useStyles();
 
   const handleInput = (e) => {
-    console.log(e.target.value)
-    const filtered = names.filter(n => n.name.toLowerCase().includes(e.target.value))
-    console.log(filtered)
+    const filtered = names.filter(n => n.name.toLowerCase().includes(e.target.value.toLowerCase()))
     setFiltered(filtered)
     setParam(e.target.value)
   }
@@ -52,7 +50,7 @@ const Datatable = () => {
           <Card className={classes.root}>
             <CardContent>
               <Typography variant="h5" component="h2">
-                Nimiä seulottuna {filtered.length}
+                Nimiä seulottuna {filtered.length && filtered.length!==names.length && filtered.length}
               </Typography>
 
               
